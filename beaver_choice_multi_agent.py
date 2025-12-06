@@ -800,7 +800,7 @@ def run_test_scenarios():
     init_database(db_engine)
     
     try:
-        quote_requests_sample = pd.read_csv("quote_requests_sample.csv")
+        quote_requests_sample = pd.read_csv("data/quote_requests_sample.csv")
         quote_requests_sample["request_date"] = pd.to_datetime(
             quote_requests_sample["request_date"], format="%m/%d/%y", errors="coerce"
         )
@@ -896,8 +896,8 @@ def run_test_scenarios():
     
     # Save results
     results_df = pd.DataFrame(results)
-    results_df.to_csv("test_results.csv", index=False)
-    print(f"\nResults saved to 'test_results.csv'")
+    results_df.to_csv("results/test_results.csv", index=False)
+    print(f"\nResults saved to 'results/test_results.csv'")
     print(f"{'='*80}\n")
     
     return results
