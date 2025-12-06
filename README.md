@@ -4,16 +4,7 @@ A comprehensive multi-agent AI system for intelligent inventory management, quot
 
 ##  Project Overview
 
-This project implements an intelligent multi-agent system to revolutionize the operations of Beaver's Choice Paper Company. The system handles customer inquiries, manages inventory levels, generates competitive quotes, and processes sales transactions through coordinated AI agents.
-
-##  System Architecture
-
-The system consists of **4 specialized agents**:
-
-1. **Orchestrator Agent** - Central coordinator that routes requests
-2. **Inventory Agent** - Manages stock levels and reordering
-3. **Quoting Agent** - Generates competitive price quotes
-4. **Sales Agent** - Finalizes transactions and order fulfillment
+This project implements an intelligent multi-agent system using **smolagents** framework with **GPT-4o-mini** to handle customer inquiries, manage inventory, generate quotes, and process sales.
 
 ##  Quick Start
 
@@ -32,11 +23,7 @@ cp .env.example .env
 ### Running the System
 
 ```bash
-# Navigate to src folder
-cd src
-
-# Run the system
-python main.py
+python beaver_choice_multi_agent.py
 ```
 
 ##  Project Structure
@@ -44,42 +31,35 @@ python main.py
 ```
  Beaver's Choice Multi-Agent System
 
-  requirements.txt                # Python dependencies
-  .env.example                    # Environment template
-  .gitignore                      # Git ignore rules
-  README.md                       # Project documentation
-  PROJECT_STRUCTURE.md            # Detailed structure guide
-  project_starter.py              # Legacy helper functions
+ beaver_choice_multi_agent.py       # Main implementation file
+ project_starter.py                 # Helper functions & database setup
+ requirements.txt                   # Python dependencies
+ .env.example                       # Environment template
+ .gitignore                         # Git ignore rules
+ README.md                          # This file
+ PROJECT_STRUCTURE.md               # Detailed structure guide
 
-  src/                            # Source Code (Organized!)
-    __init__.py                    # Package initialization
-    main.py                        # Main entry point
-    agents.py                      # Agent definitions
-    tools.py                       # Agent tools (9 tools)
-    utils.py                       # Helper functions
+ docs/                              # Documentation
+    PROJECT_REPORT.md
+    agent_workflow_diagram.png
+    agent_workflow_diagram.md
 
-  docs/                           # Documentation & Diagrams
-     PROJECT_REPORT.md           # Comprehensive report (19 KB)
-     agent_workflow_diagram.png  # Visual workflow (517 KB)
-     agent_workflow_diagram.md   # Workflow description
+ data/                              # Data files
+    quote_requests.csv
+    quote_requests_sample.csv
+    quotes.csv
 
-  data/                           # Data Files
-     quote_requests.csv          # All customer requests (30 KB)
-     quote_requests_sample.csv   # Test dataset (19 requests)
-     quotes.csv                  # Historical quotes (57 KB)
-
-  results/                        # Test Results
-      test_results.csv            # Evaluation output (16 KB)
+ results/                           # Test results
+     test_results.csv
 ```
 
 ##  Features
 
-- ** 4 Specialized AI Agents** working in harmony
-- ** Intelligent Decision Making** using historical data
-- ** Smart Pricing** with automatic bulk discounts (5%, 10%, 15%)
-- ** Real-time Financial Tracking** of cash and inventory
-- ** Automated Reordering** when stock is low
-- ** Professional Communication** with customers
+- **4 Specialized AI Agents** (Orchestrator, Inventory, Quoting, Sales)
+- **9 Intelligent Tools** for all operations
+- **Smart Pricing** with bulk discounts
+- **Automated Inventory Management**
+- **Real-time Financial Tracking**
 
 ##  Technology Stack
 
@@ -91,17 +71,7 @@ python main.py
 ##  Documentation
 
 - [PROJECT_REPORT.md](docs/PROJECT_REPORT.md) - Complete system documentation
-- [agent_workflow_diagram.md](docs/agent_workflow_diagram.md) - Detailed workflow
-- [PROJECT_STRUCTURE.md](PROJECT_STRUCTURE.md) - Directory structure guide
-
-##  Key Achievements
-
--  4 specialized agents working in coordination
--  9 tools utilizing all helper functions
--  Intelligent quote generation with discounts
--  Automated inventory management
--  Real-time financial tracking
--  Professional customer communication
+- [agent_workflow_diagram.md](docs/agent_workflow_diagram.md) - Workflow details
 
 ##  Author
 
