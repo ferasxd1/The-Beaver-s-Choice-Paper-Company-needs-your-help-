@@ -23,6 +23,7 @@ cp .env.example .env
 ### Running the System
 
 ```bash
+cd src
 python beaver_choice_multi_agent.py
 ```
 
@@ -31,13 +32,9 @@ python beaver_choice_multi_agent.py
 ```
  Beaver's Choice Multi-Agent System
 
- beaver_choice_multi_agent.py       # Main implementation file
- project_starter.py                 # Helper functions & database setup
- requirements.txt                   # Python dependencies
- .env.example                       # Environment template
- .gitignore                         # Git ignore rules
- README.md                          # This file
- PROJECT_STRUCTURE.md               # Detailed structure guide
+ src/                               # Source Code
+    beaver_choice_multi_agent.py   # Main implementation
+    project_starter.py             # Helper functions
 
  docs/                              # Documentation
     PROJECT_REPORT.md
@@ -50,7 +47,13 @@ python beaver_choice_multi_agent.py
     quotes.csv
 
  results/                           # Test results
-     test_results.csv
+    test_results.csv
+
+ requirements.txt                   # Python dependencies
+ .env.example                       # Environment template
+ .gitignore                         # Git ignore rules
+ README.md                          # This file
+ PROJECT_STRUCTURE.md               # Detailed structure guide
 ```
 
 ##  Features
